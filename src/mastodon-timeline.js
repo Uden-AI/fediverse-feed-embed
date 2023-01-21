@@ -100,7 +100,7 @@ MastodonApi.prototype.getToots = function () {
 			// User name and url
 			user = 
 				'<div class="mt-user">'
-					+ '<a href="' + status_.reblog.account.url + '" rel="noopener noreferrer" target="_blank">'
+					+ '<a href="' + status_.reblog.account.url + '" rel="noopener noreferrer" target="_blank" style="color:white">'
 						+ status_.reblog.account.username + '<span class="visually-hidden"> post</span>'
 					+ '</a>'
 				+ '</div>';
@@ -123,9 +123,16 @@ MastodonApi.prototype.getToots = function () {
 			// User name and url
 			user =
 				'<div class="mt-user">'
-					+ '<a href="' + status_.account.url + '" rel="noopener noreferrer" target="_blank">'
-						+ status_.account.username + '<span class="visually-hidden"> post</span>'
+					+ '<a href="' + status_.account.url + '" rel="noopener noreferrer" target="_blank" style="color:white">'
+						+ status_.account.username + ' Uden ' + '<img src="./media/verified.png" style="width:14px">' + '<span class="visually-hidden"> post</span>'
 					+ '</a>'
+					
+					+ '<br>'
+					
+					+ '<a href="' + status_.account.url + '" rel="noopener noreferrer" target="_blank" style="color:gray;">'
+						+ 'Erik@social.uden.ai' + '<span class="visually-hidden"> post</span>'
+					+ '</a>'
+					
 				+ '</div>';
 
 			// Date
